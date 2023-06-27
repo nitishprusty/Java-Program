@@ -13,40 +13,45 @@ public class MovieTicketCalculation {
         String refreshment = sc.next();
         System.out.println("Enter the circle");
         String circle = sc.next();
-        if(tickets >= 5 && tickets <= 40){
-            
-            switch(circle){
+        if (tickets >= 5 && tickets <= 40) {
+
+            switch (circle) {
                 case "k":
                     int priceperticket = 75;
-                    int cost = tickets*priceperticket;
-                    if(tickets > 20){
-                        cost -= (0.20*cost);
+                    int cost = tickets * priceperticket;
+                    if (tickets > 20) {
+                        cost -= (0.20 * cost);
                     }
-                    if(coupon.equals("y")){
-                        cost-= (0.02*cost);
+                    if (coupon.equals("y")) {
+                        cost -= (0.02 * cost);
                     }
-                    if(refreshment.equals("y")){
-                        cost += (50*tickets);
+                    if (refreshment.equals("y")) {
+                        cost += (50 * tickets);
                     }
                     System.out.println("Total cost - " + cost);
                     break;
                 case "q":
                     int perticket = 150;
-                    int tot = tickets*perticket;
-                    if(tickets > 20){
-                        tot -= (0.20*tot);
+                    int tot = tickets * perticket;
+                    if (tickets > 20) {
+                        tot -= (0.20 * tot);
                     }
-                    if(coupon.equals("y")){
-                        tot -= (0.02*cost);
+                    if (coupon.equals("y")) {
+                        tot -= (0.02 * tot);
                     }
-                    if(refreshment.equals("y")){
+                    if (refreshment.equals("y")) {
                         tot += (50 * tickets);
                     }
+                    System.out.println("Total cost - " + tot);
+                    break;
+                default:
+                    System.out.println("Invalid Inpput");
 
             }
 
-        }else{
+        } else {
             System.out.println("Minimum Number of tickets should be 5 and max is 40");
         }
+        sc.close();
     }
 }
