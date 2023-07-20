@@ -9,14 +9,13 @@ public class TowerofHanoi {
 
     }
     static void Move(int n , String source,String helper,String Destination){
-        if(n == 1){
-            System.out.println("Disk " + n + " move from " + source +  " to " + Destination);
+        if(n == 1) {
+            System.out.println(source + " -> " + Destination);
             return;
         }
-            Move(n - 1, source, Destination, helper);
-            System.out.println("Disk " + n + " move from " + source +  " to " + Destination);
-            Move(n - 1, helper, source, Destination);
-        
+        Move(n - 1, source, Destination, helper);
+        Move(1, source, helper, Destination);
+        Move(n - 1, helper, source, Destination);
     }
     
 }

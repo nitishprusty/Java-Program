@@ -1,0 +1,20 @@
+All regex pattern
+
+"[abc]" - a,b or c
+"[^abc] - All characters except a,b,c
+"[a-z]" - a to z
+"[A-Z]" - A to z
+"[a-zA-Z]" - a to z or A TO Z 
+"[0 - 9]" - 0 to 9
+
+"[a-z]?" a to z occur 0 or 1 time
+"[a-z]+" a to z occur 1 or more times
+"[a-z]*" a to z occur 0 or more times
+"[a-z]{n}" a to z occur n times
+"[a-z]{n,}" a to z occur n or more times
+"[a-z]{n,x} a to z occur n times but less than x times
+
+
+\s - single whitespace
+\s+ - one or more spaces
+"^[a-z]$" - ^(Start of the string) , a to z , $(End of the string)
